@@ -99,6 +99,9 @@ class MainActivity : AppCompatActivity() {
         val newScore = getString(R.string.YourScore, score)
         gameScoreLbl.text = newScore
 
+        val blinckAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
+        gameScoreLbl.startAnimation(blinckAnimation)
+
     }
 
     private fun resetGame() {
