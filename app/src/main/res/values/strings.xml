@@ -4,4 +4,5 @@
     <string name="timeLeft">Time Left: %1$d</string>
     <string name="tapMe">Tap Me!</string>
     <string name="GameOverMessage">Times up! Your score was: %1$d</string>
+    <string name="about">About</string>
 </resources>

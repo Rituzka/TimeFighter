@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,8 +54,27 @@ class MainActivity : AppCompatActivity() {
             savedInstanceState.getInt(SCORE_KEY)
             savedInstanceState.getLong(TIME_LEFT_KEY)
             restoreGame()
-        }else
-          resetGame()
+        }else {
+            resetGame()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        if(item.itemId == R.id.actionAbout ) {
+            showInfo()
+        }
+        return true
+    }
+
+    private fun showInfo() {
+        TODO("Not yet implemented")
     }
 
     private fun restoreGame() {
